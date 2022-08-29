@@ -1,0 +1,16 @@
+.tbl{
+    width: 100%;
+    border: 1px solid #ccc;
+}
+
+.align-right{
+    float: right;
+}
+
+#empForm {
+    display: none;
+}
+
+.showEmpForm{
+    display: block !important;
+}

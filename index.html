@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="css/styles.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+    <body>
+
+		<!-- <table>
+			<tr><td id="empId1">sdfsadf</td><td id="empName"></td><td></td><td></td><td></td></tr>
+			<tr><td id="empId2"></td><td></td><td></td><td></td><td></td></tr>
+			<tr><td id="empId3"></td><td></td><td></td><td></td><td></td></tr>
+			<tr><td id="empId4"></td><td></td><td></td><td></td><td></td></tr>
+		</table> -->
+		<div class="">
+			<button class="align-right" onClick="addEmp()">Add Employee</button>
+
+		<table id="empTbl" class="tbl"></table>
+
+		</div>
+
+
+		<div id="empForm">
+
+			<form name="empDetails">
+				<div>
+					<label>Emp Id</label> <input type="text" name="empId" id="empId" />
+				</div>
+				<div>
+					<label>Emp Name</label> <input type="text" name="empName" id="empName" />
+				</div>
+				<div>
+					<label>Emp Salary</label> <input type="text" name="empSalary" id="empSalary" />
+				</div>
+				<div>
+					<label>Emp Age</label> <input type="text" name="empAge" id="empAge" />
+				</div>			
+				<div>
+					<button type="reset">Reset</button>
+					<button type="button" onClick="submitForm()">Submit</button>
+				</div>	
+			</form>
+		</div>
+
+
+        <script src="js/script.js"></script>
+    </body>
+</html>
