@@ -16,7 +16,7 @@ $.ajax({
     var tbl = '';
 
     for(var i=0; i<resp.data.length; i++){
-        tbl += '<tr><td>'+ resp.data[i].id + '</td><td>' + resp.data[i].employee_name + '</td><td>' + resp.data[i].employee_salary + '</td><td>' + resp.data[i].employee_age + '</td><td>' + resp.data[i].profile_image + '</td></tr>';
+        tbl += '<tr><td>'+ resp.data[i].id + '</td><td>' + resp.data[i].employee_name + '</td><td>' + resp.data[i].employee_salary + '</td><td>' + resp.data[i].employee_age + '</td><td>' + resp.data[i].profile_image + '<td><button onClick="editRecord('+ resp.data[i].id +')">Edit</button><button onClick="deleteRecord(' + resp.data[i].id + ')">Delete</button></td></td></tr>';
     }
 
     document.getElementById("empTbl").innerHTML = tbl;
@@ -29,6 +29,31 @@ $.ajax({
     }
 });
 
+function editRecord(id){
+
+document.getElementById('editEmpForm').style.display = 'inline-block';
+document.getElementById('overlay').style.display = 'inline-block';
+
+$.ajax({
+    url: 'https://dummy.restapiexample.com/api/v1/employees/' + id,
+    method: 'GET',
+    dataType: 'JSON',
+    success: function(resp){
+        console.log(resp);
+    }
+});
+
+
+}
+
+function closeEmpEditForm(){
+    document.getElementById('editEmpForm').style.display = 'none';
+    document.getElementById('overlay').style.display = 'none';
+}
+
+function deleteRecord(id){
+    alert(id);
+}
 
 function addEmp(){
     document.getElementById('empForm').setAttribute('class', 'showEmpForm');
