@@ -14,3 +14,28 @@
 .showEmpForm{
     display: block !important;
 }
+
+.overlay{
+    height: 100%;
+    width: 100%;
+    background: #000;
+    opacity: 0.3;
+    z-index: 1000;
+    position:absolute;
+    top: 0;
+    left: 0;
+}
+
+.close-btn{
+    float: right;
+}
+
+#editEmpForm{
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    width: 300px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 1001;
+}
