@@ -42,24 +42,24 @@
 			</form>
 		</div>
 
-		<div id="editEmpForm" style="display:none">
+		<div id="editEmpForm" style="display:none; background-color: #fff;">
 		<button class="close-btn" id="close" onClick="closeEmpEditForm()">X</button>
-			<form name="empDetails">
+			<form name="empEditDetails">
 				<div>
-					<label>Emp Id</label> <input type="text" name="empId" id="empId" />
+					<label>Emp Id</label> <input type="text" disabled="true" name="empId" id="editEmpId" />
 				</div>
 				<div>
-					<label>Emp Name</label> <input type="text" name="empName" id="empName" />
+					<label>Emp Name</label> <input type="text" name="empName" id="editEmpName" />
 				</div>
 				<div>
-					<label>Emp Salary</label> <input type="text" name="empSalary" id="empSalary" />
+					<label>Emp Salary</label> <input type="text" name="empSalary" id="editEmpSalary" />
 				</div>
 				<div>
-					<label>Emp Age</label> <input type="text" name="empAge" id="empAge" />
+					<label>Emp Age</label> <input type="text" name="empAge" id="editEmpAge" />
 				</div>			
 				<div>
 					<button type="reset">Reset</button>
-					<button type="button" onClick="submitForm()">Submit</button>
+					<button type="button" onClick="submitEditForm()">Update</button>
 				</div>	
 			</form>
 		</div>
